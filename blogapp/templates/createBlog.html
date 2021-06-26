@@ -6,10 +6,11 @@
 </head>
 <body>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    {{form.media}}
      {{form.as_p}}
-    <input type="submit" value="저장"/>
+    <input type="submit" class="btn btn-dark" value="저장"/>
 
     </form>
 
