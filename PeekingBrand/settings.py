@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogapp.apps.BlogappConfig',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,11 @@ import os
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'blogapp', 'static')
+]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
