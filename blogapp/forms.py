@@ -1,6 +1,8 @@
 from django import forms
 from .models import Blog
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from django.contrib.auth.forms import  AuthenticationForm
+
 
 class CreateBlog(forms.ModelForm):
     class Meta:
@@ -15,3 +17,7 @@ class CreateBlog(forms.ModelForm):
 
             'body': forms.CharField(widget=CKEditorUploadingWidget()),
         }
+
+
+
+class LoginForm(AuthenticationForm):

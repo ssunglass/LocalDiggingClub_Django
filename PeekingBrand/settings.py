@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'bootstrap_modal_forms',
+    'widget_tweaks',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
@@ -139,3 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
+
+
+LOGIN_REDIRECT_URL = '/createBlog/'
+
