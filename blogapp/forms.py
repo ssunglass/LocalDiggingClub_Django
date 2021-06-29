@@ -1,7 +1,10 @@
 from django import forms
 from .models import Blog
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from django.contrib.auth.forms import  AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.forms import EmailField
+
+
 
 
 class CreateBlog(forms.ModelForm):
@@ -18,6 +21,12 @@ class CreateBlog(forms.ModelForm):
             'body': forms.CharField(widget=CKEditorUploadingWidget()),
         }
 
-
-
 class LoginForm(AuthenticationForm):
+    username = EmailField(widget=forms.EmailInput(attrs={'autofocus': True}))
+
+
+
+
+
+
+

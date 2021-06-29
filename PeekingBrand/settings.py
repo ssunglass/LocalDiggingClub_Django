@@ -142,6 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
 
-
 LOGIN_REDIRECT_URL = '/createBlog/'
+
+AUTH_USER_MODEL = 'blogapp.User'
+
 

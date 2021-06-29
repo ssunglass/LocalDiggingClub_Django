@@ -28,16 +28,22 @@
 
  <a href="{% url 'createBlog' %}">글쓰기</a>
 
+ <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<button id="login-btn" class="btn btn-primary" type="button" name="button">로그인</button>
+
  <script type="text/javascript">
      $(function() {
 
-      $("").modalForm({
-          formURL: "{% url  %}"
+      $("#login-btn").modalForm({
+          formURL: "{% url 'login' %}"
         });
 
-     })
-
-
+     });
  </script>
 
 

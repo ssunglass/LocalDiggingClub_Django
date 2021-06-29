@@ -27,10 +27,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', blogapp.views.home, name="home"),
     path('blogList/', blogapp.views.blogList, name="blogList"),
-    path('blogList/createBlog/', blogapp.views.createBlog, name="createBlog"),
+    path('createBlog/', blogapp.views.createBlog, name="createBlog"),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
-    path('login/', blogapp.views.LoginView.as_view(), name="login"),
+    path('login/', blogapp.views.LoginView.as_view(), name='login'),
+
 
 ]
 

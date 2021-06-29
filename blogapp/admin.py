@@ -9,7 +9,9 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = ('title', 'pub_date')
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'password', 'registered_dttm', 'status')
+    list_display = ('username', 'email', 'password', 'registered_dttm', 'status','is_superuser', 'is_active')
+    list_display_links = ('email', )
+    exclude = ('password', )
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(User, UserAdmin)
