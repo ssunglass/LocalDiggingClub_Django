@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import CreateBlog
+from .forms import CreateBlog, CreateBanner
 from .models import Blog, User
 from bootstrap_modal_forms.generic import BSModalLoginView
 from django.contrib.auth.decorators import login_required
@@ -37,6 +37,22 @@ def createBlog(request):
     else:
         form = CreateBlog()
         return render(request, 'createBlog.html', {'form': form})
+
+@login_required(login_url='/login/')
+def createBanner(request):
+    if request.method == 'POST':
+        form = CreateBanner(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect('blogList')
+        else:
+            return redirect('home')
+
+    else:
+        form = CreateBanner()
+        return render(request, 'createBanner.html', {'form': form})
+
 
 
 class LoginView(BSModalLoginView):

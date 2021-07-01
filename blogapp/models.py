@@ -37,3 +37,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def email_user(self, subject, message, from_email=None, **kwargs):  # 이메일 발송 메소드
          send_mail(subject, message, from_email, [self.email], **kwargs)
+
+
+class Banner(models.Model):
+    title = models.CharField(max_length=50)
+    location = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='bannerImages/', null=True)
+
+    def __str__(self):
+        return self.title
