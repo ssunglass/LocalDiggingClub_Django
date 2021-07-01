@@ -23,7 +23,7 @@ def blogDetail(request, blog_id):
     return render(request, 'blogDetail.html', {'blog_detail': blog_detail})
 
 
-@login_required(login_url='login/')
+@login_required(login_url='/login/')
 def createBlog(request):
     if request.method == 'POST':
         form = CreateBlog(request.POST)
