@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateBlog, CreateBanner
-from .models import Blog, User
+from .models import Blog, User, Banner
 from bootstrap_modal_forms.generic import BSModalLoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -9,13 +9,18 @@ from .forms import LoginForm
 
 # Create your views here.
 
+
+
 def home(request):
     return render(request, 'home.html')
 
 
 def blogList(request):
     blogs = Blog.objects.all()
-    return render(request, 'blogList.html', {'blogs': blogs})
+    banners = Banner.objects.all()
+    return render(request, 'blogList.html', {'blogs': blogs, 'banners': banners})
+
+
 
 
 def blogDetail(request, blog_id):
@@ -58,10 +63,9 @@ def createBanner(request):
 class LoginView(BSModalLoginView):
     authentication_form = LoginForm
     template_name = 'login.html'
-
-def form_invalid(self, form):
-    messages.error(self.request, '로그인에 실패하였습니다.', extra_tags='danger')
-    return super().form_invalid(form)
+    def form_invalid(self, form):
+        messages.error(self.request, '로그인에 실패하였습니다.', extra_tags='danger')
+        return super().form_invalid(form)
 
     # form = CreateBlog()
     # return render(request, 'createBlog.html', {'form': form})
