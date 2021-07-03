@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{% static 'css/test.css' %}">
+    <script src="{% static 'js/carousel.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/blogList.css' %}">
     <title>골목 브랜드 목록</title>
 </head>
 
 <body>
  <div class="container">
-  <h2>Carousel Example</h2>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+  <!--  <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
+    -->
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
+     <!-- <div class="carousel-inner">
       <div class="item active">
         <img src="la.jpg" alt="Los Angeles" style="width:100%;">
       </div>
@@ -36,8 +37,24 @@
       <div class="item">
         <img src="ny.jpg" alt="New york" style="width:100%;">
       </div>
-    </div>
+    </div> -->
 
+<div class="carousel-inner" role="listbox">
+{% for banner in banners %}
+
+    {% if forloop.counter == 1 %}
+    <div class="item active">
+    {% else %}
+    <div class="item">
+    {% endif %}
+        <img src="{{ banner.image.url }}" alt="Image" width="460" height="345">
+  <div class="carousel-caption">
+    <h3>{{ banner.title }}</h3>
+    <p>{{ banner.location }}</p>
+  </div>
+    </div>
+    {% endfor %}
+</div>
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
@@ -49,6 +66,10 @@
     </a>
   </div>
 </div>
+ </div>
+
+
+
 
  {% for blog in blogs %}
    <main role="main" class="container">
@@ -62,14 +83,6 @@
    </main>
  {% endfor %}
 
-
- {% for banner in banners %}
-
-
-   <h3> {{ banner.title }}</h3>
- <h3> {{ banner.location }}</h3>
-
-  {% endfor %}
 
 
  <a href="{% url 'createBlog' %}">글쓰기</a>
