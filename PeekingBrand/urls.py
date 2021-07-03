@@ -25,8 +25,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', blogapp.views.home, name="home"),
-    path('blogList/', blogapp.views.blogList, name="blogList"),
+   # path('', blogapp.views.home, name="home"),
+    path('', blogapp.views.blogList, name="blogList"),
     path('createBlog/', blogapp.views.createBlog, name="createBlog"),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),

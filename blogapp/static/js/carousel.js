@@ -1,6 +1,6 @@
 function appendIndicator(carousel) {
  var myCarousel = $('carousel');
-  myCarousel.append("<ol class='carousel-indicators'></ol>");
+  myCarousel.append("<ul class='carousel-indicators'></ul>");
     var indicators = $(".carousel-indicators");
     myCarousel.find(".carousel-inner").children(".item").each(function(index) {
       (index === 0) ?

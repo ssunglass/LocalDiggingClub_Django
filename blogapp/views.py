@@ -2,17 +2,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateBlog, CreateBanner
 from .models import Blog, User, Banner
 from bootstrap_modal_forms.generic import BSModalLoginView
+from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import LoginForm
 
 
 # Create your views here.
-
-
-
-def home(request):
-    return render(request, 'home.html')
 
 
 def blogList(request):
@@ -60,7 +56,7 @@ def createBanner(request):
 
 
 
-class LoginView(BSModalLoginView):
+class LoginView(LoginView):
     authentication_form = LoginForm
     template_name = 'login.html'
     def form_invalid(self, form):

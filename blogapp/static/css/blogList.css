@@ -1,10 +1,74 @@
 .blog-title {
-
-
-
-font-family: Eulyoo1945;
 font-weight: 600;
 font-size: 28px;
-text-align: center;
+color:black;
+
 
 }
+
+
+
+
+.carousel-caption {
+   position: relative;
+   top:0;
+   left:0;
+   right:0;
+
+}
+.carousel-caption h3 {
+   color: black;
+   font-weight:600;
+   font-size: 64px;
+
+
+}
+
+.carousel-caption p {
+   color: black;
+   font-weight: 600;
+  font-size: 28px;
+
+}
+
+.mt-5 {
+display:inline-block
+
+
+}
+
+
+
+.container .title {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 64px;
+
+
+}
+
+.container .title:after{
+  /*
+  display: block;
+  float: right;
+  margin-top: 1em;
+  border-top: 2px solid silver;
+  width: 60%; */
+
+
+  content: "";
+  flex: 1 1  ;
+  margin: auto;
+  border-bottom: 1px solid;
+
+}
+
+ hr {
+   border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333
+
+ }
