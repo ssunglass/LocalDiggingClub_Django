@@ -14,6 +14,7 @@ class Blog(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     body = RichTextUploadingField()
     image = models.ImageField(upload_to='bannerImages/', null=True)
+    instagram = models.URLField(max_length=250, default='')
 
 
 class User(AbstractBaseUser, PermissionsMixin):

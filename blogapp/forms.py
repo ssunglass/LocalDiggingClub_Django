@@ -11,7 +11,7 @@ class CreateBlog(forms.ModelForm):
     class Meta:
         model = Blog
 
-        fields = ['brand', 'location', 'image', 'title', 'body']
+        fields = ['brand', 'location', 'instagram', 'image', 'title', 'body']
 
         widgets = {
 
