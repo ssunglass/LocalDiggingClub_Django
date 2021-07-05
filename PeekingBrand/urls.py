@@ -31,7 +31,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
-    path('createBanner/', blogapp.views.createBanner, name="createBanner")
+#    path('createBanner/', blogapp.views.createBanner, name="createBanner")
 
 ]
 

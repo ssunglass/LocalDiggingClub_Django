@@ -1,10 +1,14 @@
 .blog-title {
 font-weight: 600;
 font-size: 28px;
-color:black;
-
-
+color:black
 }
+
+.blog-title:hover {
+color: blue;
+text-decoration: none;
+}
+
 
 
 
@@ -16,6 +20,8 @@ color:black;
    right:0;
 
 }
+
+
 .carousel-caption h3 {
    color: black;
    font-weight:600;

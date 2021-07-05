@@ -8,9 +8,12 @@ from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 class Blog(models.Model):
+    brand = models.CharField(max_length=50, default='')
+    location = models.CharField(max_length=200, default='')
     title = models.CharField(max_length=100)
     pub_date = models.DateTimeField(auto_now_add=True)
     body = RichTextUploadingField()
+    image = models.ImageField(upload_to='bannerImages/', null=True)
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -39,10 +42,12 @@ class User(AbstractBaseUser, PermissionsMixin):
          send_mail(subject, message, from_email, [self.email], **kwargs)
 
 
-class Banner(models.Model):
-    title = models.CharField(max_length=50)
-    location = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='bannerImages/', null=True)
 
-    def __str__(self):
-        return self.title
+# class Banner(models.Model):
+  #  title = models.CharField(max_length=50)
+   # location = models.CharField(max_length=200)
+    #image = models.ImageField(upload_to='bannerImages/', null=True)
+
+  #  def __str__(self):
+   #     return self.title
+
