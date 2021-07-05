@@ -8,15 +8,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="{% static 'css/blogDetail.css' %}">
+     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
     <title>{{ blog_detail.title }}</title>
 </head>
 <body>
 
+
+<div class="container head">
+
+    <div class="head-title">
+      <p onclick="history.go(-1)" role="button">목록으로</p>
+    </div>
+    <div class="head-link-div">
+<p><a class="head-link" href="{{ blog_detail.instagram }}">인스타그램</a></p>
+    </div>
+</div>
+
+
  <div class="container column text-center">
-     <h1>{{ blog_detail.title}}</h1>
-     <p>{{ blog_detail.pub_date}}</p>
+     <div class="blog-head">
+
+     <h1>{{ blog_detail.brand}}</h1>
+     <p>{{ blog_detail.location}}</p>
+
+         <hr class="vertical-line">
+
+
+     </div>
      <p>{{ blog_detail.body | safe}}</p>
+
+
 
 
  </div>
