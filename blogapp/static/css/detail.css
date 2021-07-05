@@ -3,13 +3,13 @@ display:flex;
 justify-content:space-between;
 }
 
-.head .head-title{
+.head .head-title-div{
 font-weight: 600;
 font-size: 28px;
 
 }
 
-.head .head-title:hover{
+.head .head-title-div:hover{
 color: orange;
 
 }
@@ -38,14 +38,27 @@ height: 50px
 .vertical-line {
     margin-left: 50%
     margin-right: 50%;
-    margin-top: 5%;
-    margin-bottom:5%;
-    height: 408px;
+    margin-top: 3%;
+    margin-bottom:3%;
+    height: 340px;
     width: 1px;
     background-color: black;
 
-
-
-
 }
+
+.head-title-div {
+padding-top: 10%;
+}
+
+.head-link-div{
+padding-top: 10%;
+}
+
+.blog-main{
+text-align:justify
+}
+
+
+
+
 

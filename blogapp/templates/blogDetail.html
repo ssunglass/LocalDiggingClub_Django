@@ -14,11 +14,23 @@
 <body>
 
 
+
+
+
+
 <div class="container head">
 
-    <div class="head-title">
+    <div class="head-title-div">
       <p onclick="history.go(-1)" role="button">목록으로</p>
     </div>
+
+    <div class="logo">
+    <a href="{% url 'blogList' %}">
+    <img class="img-center"height="193px" width="385px" src="{%static 'images/logo.png' %}">
+        </a>
+
+    </div>
+
     <div class="head-link-div">
 <p><a class="head-link" href="{{ blog_detail.instagram }}">인스타그램</a></p>
     </div>
@@ -35,7 +47,9 @@
 
 
      </div>
+     <div class="blog-main">
      <p>{{ blog_detail.body | safe}}</p>
+         </div>
 
 
 
