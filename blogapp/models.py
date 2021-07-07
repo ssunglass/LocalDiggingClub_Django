@@ -15,6 +15,7 @@ class Blog(models.Model):
     body = RichTextUploadingField()
     image = models.ImageField(upload_to='bannerImages/', null=True)
     instagram = models.URLField(max_length=250, default='')
+    head = models.CharField(max_length=100, default='')
 
 
 class User(AbstractBaseUser, PermissionsMixin):
