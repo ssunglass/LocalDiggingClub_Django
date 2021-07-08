@@ -1,7 +1,7 @@
 
 .blog-title {
-font-weight: 600;
-font-size: 28px;
+
+font-size: 24px;
 color:black
 }
 
@@ -25,16 +25,16 @@ text-decoration: none;
 
 .carousel-caption h3 {
    color: black;
-   font-weight:600;
-   font-size: 64px;
+
+   font-size: 60px;
 
 
 }
 
 .carousel-caption p {
    color: black;
-   font-weight: 600;
-  font-size: 28px;
+
+  font-size: 24px;
 
 }
 
@@ -49,8 +49,8 @@ display:inline-block
 .container .title {
   display: flex;
   flex-direction: row;
-  font-weight: 600;
-  font-size: 64px;
+
+  font-size: 60px;
 
 
 }
@@ -79,5 +79,9 @@ display:inline-block
     background-color: #333
 
  }
+
+
+
+
 
 

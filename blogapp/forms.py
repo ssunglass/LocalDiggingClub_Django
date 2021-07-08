@@ -25,10 +25,7 @@ class CreateBlog(forms.ModelForm):
             'title': forms.TextInput(
                 attrs={'class': 'form-control', 'style': 'width: 30%', 'placeholder': '제목을 입력하세요.'}
             ),
-            'head': forms.TextInput(
-                attrs={'class': 'form-control', 'style': 'width: 50%', 'placeholder': '표제를 입력하세요.'}
 
-            ),
 
             'body': forms.CharField(widget=CKEditorUploadingWidget()),
 

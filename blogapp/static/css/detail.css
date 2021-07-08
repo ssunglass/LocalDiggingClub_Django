@@ -4,19 +4,17 @@ justify-content:space-between;
 }
 
 .head .head-title-div{
-font-weight: 600;
-font-size: 28px;
+font-size: 24px;
 
 }
 
 .head .head-title-div:hover{
-color: orange;
+color: green;
 
 }
 
 .head .head-link{
-font-weight: 600;
-font-size: 28px;
+font-size: 24px;
 color: black;
 }
 
@@ -25,13 +23,14 @@ color:orange;
 text-decoration: none;
 }
 
-.container .blog-head h1 {
-font-weight: 600;
-font-size: 64px;
+.container .blog-brand h1 {
+
+font-size: 56px;
 }
-.container .blog-head p{
-font-weight: 600;
-font-size: 28px;
+
+.container .blog-brand p{
+font-weight: bold;
+font-size: 24px;
 height: 50px
 }
 
@@ -56,7 +55,33 @@ padding-top: 10%;
 
 .blog-main{
 text-align:justify
+
 }
+
+.blog-head{
+padding-bottom: 10%;
+
+
+}
+
+.blog-head h2 {
+
+
+font-size: 60px;
+
+}
+
+.blog-base{
+padding-left: 7%;
+padding-right: 7%;
+
+}
+
+.blog-main img{
+display: block; margin: 0px auto;
+
+}
+
 
 
 

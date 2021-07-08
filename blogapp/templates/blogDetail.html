@@ -38,8 +38,8 @@
 </div>
 
 
- <div class="container column text-center">
-     <div class="blog-head">
+ <div class="container column text-center blog-base">
+     <div class="blog-brand">
 
      <h1>{{ blog_detail.brand}}</h1>
      <p>{{ blog_detail.location}}</p>
@@ -48,8 +48,16 @@
 
 
      </div>
-     <div class="blog-main">
-     <p>{{ blog_detail.body | safe}}</p>
+
+     <div class="blog-head ">
+
+        <h2 >{{ blog_detail.head | linebreaks }}</h2>
+
+
+     </div>
+
+     <div class="blog-main ">
+     <p>{{ blog_detail.body | safe }}</p>
          </div>
 
 

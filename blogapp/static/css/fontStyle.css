@@ -2,11 +2,13 @@
   font-family: 'Eulyoo';
   src: url('/static/fonts/Eulyoo.woff') format('woff');
 
+
 }
 
 body{
 
  font-family: 'Eulyoo';
+ font-weight: bold;
 
 
 }
