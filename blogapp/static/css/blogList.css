@@ -80,7 +80,12 @@ display:inline-block
 
  }
 
+ .carousel-item:hover h3{
 
+color: green;
+
+
+}
 
 
 
