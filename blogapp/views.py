@@ -5,7 +5,10 @@ from bootstrap_modal_forms.generic import BSModalLoginView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .forms import LoginForm
+from django.http import JsonResponse
+from django.views.generic import ListView, DetailView
 
 
 # Create your views here.
@@ -13,8 +16,12 @@ from .forms import LoginForm
 
 def blogList(request):
     blogs = Blog.objects.all()
-    # banners = Banner.objects.all()
-    return render(request, 'blogList.html', {'blogs': blogs})
+    paginator = Paginator(blogs, 1)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+
+    return render(request, 'blogList.html', {'blogs': blogs, 'posts': posts})
+
 
 
 
@@ -65,3 +72,10 @@ class LoginView(LoginView):
 
     # form = CreateBlog()
     # return render(request, 'createBlog.html', {'form': form})
+
+
+
+
+
+
+

@@ -11,6 +11,9 @@ function appendIndicator(carousel) {
 
 }
 
-$('.carousel').carousel();
+$('.carousel').carousel({
+interval:2500
+});
 
 appendIndicator('#myCarousel');
+
