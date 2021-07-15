@@ -92,53 +92,120 @@
        </div>
         {% endfor %}
 
-    <div class="paginator">
+
+
+  <!--  <nav>
+        <ul class="pagination">
        {% if posts.has_previous %}
+        <li class="page-item">
             <a href="?page={{ posts.previous_page_number}}"><</a>
-         {% endif %}
+            </li>
+         {% else %}
+        <li class="page-item disabled">
+                        <a class="page-link" href="#"><</a>
+        </li>
+        {% endif %}
 
            <span>{{ posts.number}}/{{ posts.paginator.num_pages }}</span>
 
 
-           {% if posts.has_next %}
+        {% if posts.has_next %}
+         <li>
           <a href="?page={{posts.next_page_number}}">></a>
-             {% endif %}
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+                        <a class="page-link" href="#">></a>
+                    </li>
+                    {% endif %}
 
-        </div>
 
+            </ul>
+        </nav>
 
+-->
 
    </main>
 
 
+ <div id="blog-posts" class="container">
+     {% for blog in posts %}
+     <div>
+         <p><a class="blog-title" href="{% url 'blogDetail' blog.id %}" role="button">{{blog.title}}</a></p>
+
+     </div>
+     {% endfor %}
+ </div>
+
+<div class="container mt-5">
+    <nav id="pagination">
+        <ul class="pagination justify-content-center">
+            {% if posts.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="{{ request.path }}?page={{ posts.previous_page_number }}"><</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><</a>
+            </li>
+            {% endif %}
+            {% for i in posts.paginator.page_range %}
+              {% if posts.number == i %}
+               <li class="page-item active">
+                 <a class="page-link" href="{{ request.path }}?page={{i}}">{{i}}</a>
+               </li>
+              {% else %}
+              <li class="page-item">
+                  <a class="page-link" href="{{ request.path }}?page={{i}}">{{i}}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+            {% if posts.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{{ request.path }}?page={{ posts.next_page_number }}">></a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">></a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
 
 
 
+<script type="text/javascript">
+     function ajaxPagination() {
+       $('#pagination a.page-link').each((index, el) => {
+         $(el).click((e) => {
+            e.preventDefault()
+            let page_url = $(el).attr('href')
 
+            $.ajax({
+                url: page_url,
+                type: 'GET',
+                success: (data) => {
+                   $('#blog-posts').empty()
+                   $('#blog-posts').append( $(data).filter('#blog-posts').html() )
+                   $('#pagination').empty()
+                   $('#pagination').append( $(data).find('#pagination').html() )
 
+                   }
+                })
+           })
+      })
+    }
 
+    $(document).ready( function() {
+       ajaxPagination()
+       })
+    $(document).ajaxStop( function() {
+       ajaxPagination()
 
+       })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 
 </body>

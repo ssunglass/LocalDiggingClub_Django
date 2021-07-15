@@ -14,13 +14,36 @@ from django.views.generic import ListView, DetailView
 # Create your views here.
 
 
-def blogList(request):
-    blogs = Blog.objects.all()
-    paginator = Paginator(blogs, 1)
-    page = request.GET.get('page')
-    posts = paginator.get_page(page)
+# def blogList(request):
+#    blogs = Blog.objects.all()
+#    paginator = Paginator(blogs, 1)
+#    page = request.GET.get('page')
+#    posts = paginator.get_page(page)
 
-    return render(request, 'blogList.html', {'blogs': blogs, 'posts': posts})
+#    return render(request, 'blogList.html', {'blogs': blogs, 'posts': posts})
+
+class BlogListview(ListView):
+    model = Blog
+    template_name = 'blogList.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['blogs'] = Blog.objects.all()
+        paginator = Paginator(context['blogs'], 2)
+        page = self.request.GET.get('page')
+        context['posts'] = paginator.get_page(page)
+
+        try:
+            context['posts'] = paginator.page(page)
+        except PageNotAnInteger:
+            context['posts'] = paginator.page(1)
+        except EmptyPage:
+            context['posts'] = paginator.page(paginator.num_pages)
+
+        return context
+
+
 
 
 
