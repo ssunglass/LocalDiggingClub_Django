@@ -3,9 +3,14 @@ display:flex;
 justify-content:space-between;
 }
 
-.head .head-title-div{
-font-size: 24px;
+.head .head-title-div p{
+font-size: 1.25vw;
 
+}
+
+.container .blog-brand{
+
+    padding-left:3%;
 }
 
 .head .head-title-div:hover{
@@ -14,7 +19,7 @@ color: #868e96;
 }
 
 .head .head-link{
-font-size: 24px;
+font-size: 1.25vw;
 color: black;
 }
 
@@ -25,12 +30,12 @@ text-decoration: none;
 
 .container .blog-brand h1 {
 
-font-size: 56px;
+font-size: 2.9vw;
 }
 
 .container .blog-brand p{
-font-size: 24px;
-height: 50px
+font-size: 1.25vw;
+height: 4.6vh;
 }
 
 .vertical-line {
@@ -38,28 +43,28 @@ height: 50px
     margin-right: 50%;
     margin-top: 6%;
     margin-bottom:6%;
-    height: 340px;
-    width: 1px;
+    height: 35vh;
+    width: 0.05vw;
     background-color: black;
 
 }
 
 .head-title-div {
-padding-top: 10%;
+padding-top: 11vh;
 }
 
 .head-link-div{
-padding-top: 10%;
+padding-top: 11vh;
 }
 
 .blog-main{
 text-align: left;
-font-size: 24px;
+font-size: 1.25vw;
 
 }
 
 .blog-head{
-padding-bottom: 10%;
+padding-bottom: 12%;
 
 
 }
@@ -67,7 +72,7 @@ padding-bottom: 10%;
 .blog-head h2 {
 
 
-font-size: 60px;
+font-size: 3.1vw;
 
 }
 
@@ -79,15 +84,117 @@ padding-right: 7%;
 
 .blog-main img{
 display: block; margin: 0px auto;
+width:100%;
+
 
 }
 
 .blog-main iframe{
 
 display: block; margin: 0px auto;
+width:100%;
 
 }
 
+.head .logo{
+ font-size: 2.3vw;
+ color: black;
+
+
+
+}
+
+.head .logo:hover{
+
+  color:#868e96;
+  text-decoration: none;
+
+}
+
+.logo-div{
+
+    padding-top: 5%;
+    padding-left: 4%;
+
+}
+
+@media screen and (max-width:575.98px) {
+/* 스마트폰 세로 */
+
+.container .blog-brand h1{
+font-size: 6.2vw;
+
+}
+
+.blog-head h2{
+font-size: 6.2vw;
+
+}
+
+.blog-main{
+
+    font-size:3.75vw;
+}
+
+.head .head-title-div p{
+
+ font-size: 4vw;
+
+}
+
+.head .head-link{
+    font-size: 4vw;
+
+
+}
+
+.head .logo{
+   font-size:4vw;
+
+  }
+
+
+}
+
+@media screen and (min-width:576px) and (max-width:991.98px) {
+/* 타블렛 */
+.container .blog-brand h1{
+font-size: 5.4vw;
+
+}
+
+.container .blog-brand p{
+ font-size:2.6vw;
+
+}
+
+.blog-head h2{
+font-size: 5.4vw;
+
+}
+
+.blog-main{
+
+    font-size:3vw;
+}
+
+.head .head-title-div p{
+
+ font-size: 3vw;
+
+}
+
+.head .head-link{
+    font-size: 3vw;
+
+
+}
+ .head .logo{
+   font-size:4vw;
+
+  }
+
+}
 
 
 

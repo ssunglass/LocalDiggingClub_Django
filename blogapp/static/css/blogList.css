@@ -1,8 +1,7 @@
 
-
 .blog-title {
 
-font-size: 24px;
+font-size: 1.25vw;
 color:black
 }
 
@@ -27,7 +26,7 @@ text-decoration: none;
 .carousel-caption h3 {
    color: black;
 
-   font-size: 50px;
+   font-size: 2.6vw;
 
 
 }
@@ -35,7 +34,7 @@ text-decoration: none;
 .carousel-caption p {
    color: black;
 
-  font-size: 20px;
+  font-size: 1vw;
 
 }
 
@@ -51,7 +50,7 @@ display:inline-block
   display: flex;
   flex-direction: row;
 
-  font-size: 60px;
+  font-size: 3.1vw;
 
 
 }
@@ -97,16 +96,16 @@ padding-right: 7%;
 }
 
 .brand-title {
-  padding-top:5px;
+  padding-top: 1%;
 }
 
 #blog-posts{
-padding-top: 5%;
+padding-top: 1%;
 }
 
 
 .edit-page{
-padding-top: 5%;
+padding-top: 6%;
 
 }
 
@@ -132,3 +131,95 @@ color: black;
 padding-top: 3%;
 
 }
+
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 60vh;
+}
+
+.edit-page img{
+width: 3%;
+height: 3%;
+
+}
+
+
+@media screen and (max-width:575.98px) {
+/* 스마트폰 세로 */
+
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 35vh;
+
+}
+
+.container .title{
+  font-size: 5vw;
+}
+
+.carousel-caption h3{
+  font-size: 6.2vw;
+
+}
+
+.blog-base {
+  padding-top: 20%;
+
+}
+
+.brand-location p{
+
+
+  font-size:3vw;
+}
+
+.blog-title{
+  font-size:3.5vw;
+
+}
+
+.edit-page {
+  display: none;
+}
+
+
+}
+
+@media screen and (min-width:576px) and (max-width:991.98px) {
+/* 타블렛 */
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 39vh;
+
+}
+
+.container .title{
+  font-size: 5vw;
+}
+
+.carousel-caption h3{
+  font-size: 5vw;
+
+}
+.brand-location p{
+
+
+  font-size:2vw;
+}
+
+.blog-title{
+  font-size:2.5vw;
+
+}
+
+.edit-page {
+  display: none;
+}
+
+#blog-posts{
+
+  padding-top:2%
+}
+
+}
+

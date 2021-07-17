@@ -12,12 +12,7 @@
      <link rel="stylesheet" href="{% static 'css/fontStyle.css' %}">
     <title>{{ blog_detail.title }}</title>
 </head>
-<body>
-
-
-
-
-
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
 
 <div class="container head">
 
@@ -25,15 +20,15 @@
       <p onclick="history.go(-1)" role="button">목록으로</p>
     </div>
 
-    <div class="logo">
-    <a href="{% url 'blogList' %}">
-    <img class="img-center"height="100%" width="385px" src="{%static 'images/logo.png' %}">
-        </a>
+    <div class="logo-div">
+
+        <p><a class="logo" href="{% url 'blogList' %}">Local Digging Club </a></p>
+
 
     </div>
 
     <div class="head-link-div">
-<p><a class="head-link" href="{{ blog_detail.instagram }}">인스타그램</a></p>
+  <p><a class="head-link" href="{{ blog_detail.instagram }}">인스타그램</a></p>
     </div>
 </div>
 

@@ -12,3 +12,15 @@ body{
 
 
 }
+
+@font-face{
+ font-family: 'LeagueSpartan';
+ src: url('/static/fonts/LeagueSpartan.woff') format('woff');
+
+
+}
+
+.logo {
+ font-family: 'LeagueSpartan';
+
+}
