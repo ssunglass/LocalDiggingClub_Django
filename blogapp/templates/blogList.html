@@ -82,7 +82,7 @@
 
 
 
-
+<!--
    <main role="main" class="container text-center">
        {% for blog in posts %}
        <hr>
@@ -92,9 +92,7 @@
        </div>
         {% endfor %}
 
-
-
-  <!--  <nav>
+   <nav>
         <ul class="pagination">
        {% if posts.has_previous %}
         <li class="page-item">
@@ -123,13 +121,13 @@
             </ul>
         </nav>
 
--->
 
    </main>
 
-
- <div id="blog-posts" class="container">
+ -->
+ <div id="blog-posts" class="container text-center">
      {% for blog in posts %}
+     <hr>
      <div>
          <p><a class="blog-title" href="{% url 'blogDetail' blog.id %}" role="button">{{blog.title}}</a></p>
 
@@ -137,7 +135,10 @@
      {% endfor %}
  </div>
 
-<div class="container mt-5">
+
+
+
+<div class="container text-center paginator">
     <nav id="pagination">
         <ul class="pagination justify-content-center">
             {% if posts.has_previous %}
@@ -206,6 +207,9 @@
        })
 
 </script>
+
+
+
 
 
 </body>

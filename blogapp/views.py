@@ -30,7 +30,7 @@ class BlogListview(ListView):
         context = super().get_context_data(**kwargs)
 
         context['blogs'] = Blog.objects.all()
-        paginator = Paginator(context['blogs'], 2)
+        paginator = Paginator(context['blogs'], 1)
         page = self.request.GET.get('page')
         context['posts'] = paginator.get_page(page)
 
