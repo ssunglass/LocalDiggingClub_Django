@@ -10,7 +10,7 @@ font-size: 1.25vw;
 
 .container .blog-brand{
 
-    padding-left:3%;
+    padding-left:4%;
 }
 
 .head .head-title-div:hover{
@@ -114,7 +114,7 @@ width:100%;
 .logo-div{
 
     padding-top: 5%;
-    padding-left: 4%;
+    padding-left: 6%;
 
 }
 
@@ -122,7 +122,7 @@ width:100%;
 /* 스마트폰 세로 */
 
 .container .blog-brand h1{
-font-size: 6.2vw;
+font-size: 7.2vw;
 
 }
 
@@ -156,7 +156,7 @@ font-size: 6.2vw;
 
 }
 
-@media screen and (min-width:576px) and (max-width:991.98px) {
+@media screen and (min-width:576px) and (max-width:1025px) {
 /* 타블렛 */
 .container .blog-brand h1{
 font-size: 5.4vw;
@@ -169,7 +169,7 @@ font-size: 5.4vw;
 }
 
 .blog-head h2{
-font-size: 5.4vw;
+font-size: 6vw;
 
 }
 
