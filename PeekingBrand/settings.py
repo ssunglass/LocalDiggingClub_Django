@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'ckeditor',
     'ckeditor_uploader',
-    'bootstrap_modal_forms',
-    'widget_tweaks',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"

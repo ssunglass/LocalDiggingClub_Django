@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateBlog
 from .models import Blog, User
-from bootstrap_modal_forms.generic import BSModalLoginView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
