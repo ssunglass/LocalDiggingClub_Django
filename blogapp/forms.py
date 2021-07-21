@@ -3,6 +3,7 @@ from .models import Blog
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms import EmailField
+from ckeditor.widgets import CKEditorWidget
 
 
 
@@ -27,7 +28,7 @@ class CreateBlog(forms.ModelForm):
             ),
 
 
-            'body': forms.CharField(widget=CKEditorUploadingWidget()),
+            'body': forms.CharField(widget=CKEditorWidget(config_name='default')),
 
         }
 
