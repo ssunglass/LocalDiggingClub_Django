@@ -75,6 +75,7 @@ font-size: 3.1vw;
 .blog-base{
 padding-left: 7%;
 padding-right: 7%;
+margin-top: 3%;
 
 }
 
@@ -111,7 +112,7 @@ width:100%;
 .logo-div{
 
     padding-top: 5%;
-    padding-left: 6%;
+    padding-left: 2%;
 
 }
 .blog-main .image figcaption{
@@ -121,6 +122,12 @@ width:100%;
 
 .blog-main p {
   line-height: 4.5vh;
+
+}
+
+.blog-head h2 {
+
+  line-height: 8vh;
 
 }
 
