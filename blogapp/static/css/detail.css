@@ -118,6 +118,11 @@ width:100%;
     font-size: 0.9vw;
 }
 
+.blog-main {
+  line-height: 4.5vh;
+
+}
+
 @media screen and (max-width:575.98px) {
 /* 스마트폰 세로 */
 
