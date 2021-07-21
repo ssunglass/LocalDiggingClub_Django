@@ -112,7 +112,7 @@ width:100%;
 .logo-div{
 
     padding-top: 5%;
-    padding-left: 3%;
+    padding-left: 3.5%;
 
 }
 .blog-main .image figcaption{
@@ -125,11 +125,7 @@ width:100%;
 
 }
 
-.blog-head h2 {
 
-  line-height: 6vh;
-
-}
 
 @media screen and (max-width:575.98px) {
 /* 스마트폰 세로 */
@@ -181,6 +177,12 @@ font-size: 6.2vw;
 
     font-size: 4.3vw;
 
+
+}
+
+.blog-head h2 {
+
+  line-height: 5vh;
 
 }
 
