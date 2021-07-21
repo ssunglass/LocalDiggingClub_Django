@@ -113,6 +113,10 @@ width:100%;
     padding-left: 6%;
 
 }
+.blog-main .image figcaption{
+   text-align: center;
+    font-size: 0.9vw;
+}
 
 @media screen and (max-width:575.98px) {
 /* 스마트폰 세로 */
@@ -148,6 +152,19 @@ font-size: 6.2vw;
    font-size:4vw;
 
   }
+
+   .blog-main .image figcaption{
+     text-align: center;
+
+}
+
+.blog-main h2{
+
+    font-size: 4.3vw;
+
+
+}
+
 
 
 }
@@ -189,6 +206,12 @@ font-size: 6vw;
    font-size:4vw;
 
   }
+
+   .blog-main .image figcaption{
+   text-align: center;
+   font-size: 1.8vw;
+
+}
 
 }
 
