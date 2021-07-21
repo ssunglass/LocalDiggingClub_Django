@@ -30,7 +30,7 @@ font-size: 2.9vw;
 }
 
 .container .blog-brand p{
-font-size: 1.25vw;
+font-size: 1.5vw;
 height: 4.6vh;
 }
 
@@ -115,7 +115,7 @@ width:100%;
 }
 .blog-main .image figcaption{
    text-align: center;
-    font-size: 0.9vw;
+    font-size: 1vw;
 }
 
 .blog-main {
@@ -128,6 +128,11 @@ width:100%;
 
 .container .blog-brand h1{
 font-size: 7.2vw;
+
+}
+
+.container .blog-brand p{
+   font-size: 5vw;
 
 }
 
@@ -158,8 +163,9 @@ font-size: 6.2vw;
 
   }
 
-   .blog-main .image figcaption{
+  .blog-main .image figcaption{
      text-align: center;
+      font-size: 4vw;
 
 }
 
@@ -182,7 +188,7 @@ font-size: 5.4vw;
 }
 
 .container .blog-brand p{
- font-size:2.6vw;
+ font-size:3vw;
 
 }
 
@@ -214,7 +220,7 @@ font-size: 6vw;
 
    .blog-main .image figcaption{
    text-align: center;
-   font-size: 1.8vw;
+   font-size: 3vw;
 
 }
 
