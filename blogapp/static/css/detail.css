@@ -9,8 +9,9 @@ font-size: 1.25vw;
 }
 
 
-.head .head-title-div:hover{
+.head .head-title-div a:hover{
 color: #868e96;
+text-decoration: none;
 
 }
 
