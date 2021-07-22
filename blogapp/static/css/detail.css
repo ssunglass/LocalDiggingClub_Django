@@ -8,8 +8,12 @@ font-size: 1.25vw;
 
 }
 
+.head .head-title{
+color:black;
 
-.head .head-title-div a:hover{
+}
+
+.head .head-title:hover{
 color: #868e96;
 text-decoration: none;
 
