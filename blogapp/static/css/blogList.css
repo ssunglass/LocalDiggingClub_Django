@@ -162,8 +162,9 @@ height: 3%;
 }
 
 .divided .logo {
-  width: 9.5%;
   padding-bottom:1%;
+  image-rendering: -webkit-optimize-contrast;
+  width: 11%;
 
 }
 
