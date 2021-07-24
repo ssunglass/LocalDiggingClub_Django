@@ -60,13 +60,13 @@ display:inline-block
 
 }
 
-.container .title:after{
-  /*
+/* .container .title:after{
+
   display: block;
   float: right;
   margin-top: 1em;
   border-top: 2px solid silver;
-  width: 60%; */
+  width: 60%;
 
 
   content: "";
@@ -74,7 +74,8 @@ display:inline-block
   margin: auto;
   border-bottom: 1px solid;
 
-}
+} */
+
 
  hr {
    border: none;
@@ -145,6 +146,24 @@ padding-top: 3%;
 .edit-page img{
 width: 3%;
 height: 3%;
+
+}
+
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 1%;
+  margin-bottom: 2%;
+}
+
+.divided .logo {
+  width: 9.5%;
+  padding-bottom:1%;
 
 }
 
