@@ -192,6 +192,10 @@ width: 3vw;
 
 }
 
+#bottom-area {
+font-size: 1vw;
+}
+
 .carousel-inner > .carousel-item > img {
   width: 100%;
   height: 35vh;
@@ -269,6 +273,10 @@ width: 2vw;
 #blog-posts{
 
   padding-top:2%
+}
+
+#bottom-area {
+font-size: 1vw;
 }
 
 }
