@@ -3,6 +3,16 @@ display:flex;
 justify-content:space-between;
 }
 
+
+body {
+-webkit-touch-callout: none;
+user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-webkit-user-select: none;
+
+}
+
 .head .head-title-div p{
 font-size: 1.25vw;
 

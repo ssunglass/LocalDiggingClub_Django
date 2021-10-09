@@ -16,7 +16,21 @@ text-decoration: none;
 }
 
 
+#bottom-area {
+padding-top: 5%;
+font-size: 0.6vw;
+}
 
+.bottom-word{
+padding-top: 1%;
+font-family: Arial, "맑은 고딕";
+
+}
+
+.bottom-img img {
+width: 1.3vw;
+
+}
 
 
 .carousel-caption {
@@ -172,6 +186,12 @@ height: 3%;
 @media screen and (max-width:575.98px) {
 /* 스마트폰 세로 */
 
+
+.bottom-img img {
+width: 3vw;
+
+}
+
 .carousel-inner > .carousel-item > img {
   width: 100%;
   height: 35vh;
@@ -215,6 +235,11 @@ height: 3%;
 .carousel-inner > .carousel-item > img {
   width: 100%;
   height: 39vh;
+
+}
+
+.bottom-img img {
+width: 2vw;
 
 }
 
