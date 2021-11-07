@@ -5,7 +5,7 @@ register = template.Library()
 
 class CustomStaticNode(StaticNode):
     def url(self, context):
-        version = 2021_10_10
+        version = 2021_11_07
         path = f'{super().url(context)}?v={version}'
         return path
 
