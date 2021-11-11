@@ -36,7 +36,7 @@ urlpatterns = [
     path("sitemap.xml", TemplateView.as_view(
         template_name='sitemap.xml',
         content_type='application/xml'
-    ))
+    )),
 
 #    path('createBanner/', blogapp.views.createBanner, name="createBanner")
 
