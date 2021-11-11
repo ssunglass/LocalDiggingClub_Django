@@ -19,6 +19,7 @@ import blogapp.views
 from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView
 
 
 
@@ -31,6 +32,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain"))
 #    path('createBanner/', blogapp.views.createBanner, name="createBanner")
 
 ]
