@@ -38,7 +38,7 @@ urlpatterns = [
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap')
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 #    path('createBanner/', blogapp.views.createBanner, name="createBanner")
 
 ]

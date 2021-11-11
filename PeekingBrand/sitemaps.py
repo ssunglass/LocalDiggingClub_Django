@@ -9,6 +9,9 @@ class BlogSitemap(Sitemap):
     def items(self):
         return Blog.objects.all().order_by('pub_date')
 
+    def location(self, obj):
+        return """/blogList/blogDetail/%s""" % obj.pk
+
     def lastmod(self, obj):
         return obj.pub_date
 
@@ -16,6 +19,7 @@ class BlogSitemap(Sitemap):
 class StaticViewSitemap(Sitemap):
     priority = 0.6
     changefreq = 'weekly'
+
     def items(self):
         return [
             'blogList',
