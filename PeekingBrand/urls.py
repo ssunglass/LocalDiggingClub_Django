@@ -26,7 +26,7 @@ from PeekingBrand.sitemaps import BlogSitemap, StaticViewSitemap
 
 sitemaps = {
     'posts': BlogSitemap,
-    'static': StaticViewSitemap,
+
 }
 
 urlpatterns = [
