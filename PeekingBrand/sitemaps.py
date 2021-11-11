@@ -10,7 +10,7 @@ class BlogSitemap(Sitemap):
         return Blog.objects.all().order_by('pub_date')
 
     def location(self, obj):
-        return """/blogList/blogDetail/%s""" % obj.pk
+        return """/blogList/blogDetail/%s""" % obj.blog_id
 
     def lastmod(self, obj):
         return obj.pub_date
