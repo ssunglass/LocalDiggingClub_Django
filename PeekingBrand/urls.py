@@ -20,13 +20,9 @@ from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
-from django.contrib.sitemaps.views import sitemap
 
-from PeekingBrand.sitemaps import BlogSitemap, StaticViewSitemap
 
-sitemaps = {
-    'static': StaticViewSitemap,
-}
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,7 +33,11 @@ urlpatterns = [
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path(r'^sitemap\.xml$', TemplateView.as_view(
+        template_name='sitemap.xml',
+        content_type='application/xml'
+    ))
+
 #    path('createBanner/', blogapp.views.createBanner, name="createBanner")
 
 ]
