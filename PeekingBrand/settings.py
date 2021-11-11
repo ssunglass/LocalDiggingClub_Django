@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'ckeditor',
     'ckeditor_uploader',
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
+
 ]
 
 
