@@ -33,7 +33,7 @@ urlpatterns = [
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path(r'^sitemap\.xml$', TemplateView.as_view(
+    path("sitemap.xml", TemplateView.as_view(
         template_name='sitemap.xml',
         content_type='application/xml'
     ))
