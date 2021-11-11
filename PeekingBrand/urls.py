@@ -25,8 +25,7 @@ from django.contrib.sitemaps.views import sitemap
 from PeekingBrand.sitemaps import BlogSitemap, StaticViewSitemap
 
 sitemaps = {
-    'posts': BlogSitemap,
-
+    'static': StaticViewSitemap,
 }
 
 urlpatterns = [
