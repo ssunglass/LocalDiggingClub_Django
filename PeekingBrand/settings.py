@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#x$c8x*zl%w$uqsbtsah9d8jb)821j87mc0ayma7lwqk257@8h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     ".ap-northeast-2.compute.amazonaws.com",
@@ -87,8 +87,13 @@ WSGI_APPLICATION = 'PeekingBrand.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mylocaldiggingdb',
+        'User': 'admin',
+        'PASSWORD': 'dangtangg9122005',
+        'HOST': 'localdiggingclubdb.cahodehbnfjb.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+
     }
 }
 
