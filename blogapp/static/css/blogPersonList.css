@@ -270,6 +270,12 @@ font-size: 2vw;
   display: none;
 }
 
+.pagelink {
+
+font-size: 3vw
+
+}
+
 
 }
 
@@ -302,6 +308,12 @@ width: 2.5vw;
 
 .blog-title{
   font-size:2.5vw;
+
+}
+
+.pagelink{
+
+font-size:2vw
 
 }
 
