@@ -134,6 +134,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+SESSION_COOKIE_SECURE = False
+
 import os
 
 
