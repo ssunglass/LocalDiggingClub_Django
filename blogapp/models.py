@@ -36,7 +36,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     password = models.CharField(max_length=50, verbose_name='비밀번호')
     registered_dttm = models.DateTimeField(auto_now_add=True, verbose_name='등록시간')
     status = models.CharField(max_length=100, verbose_name="권한", default='')
-    is_staff = models.BooleanField('스태프 권한', default=False)
+    is_staff = models.BooleanField('스태프 권한', default=True)
     is_active = models.BooleanField('사용중', default=True)
 
     objects = UserManager()
