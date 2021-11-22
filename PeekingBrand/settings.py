@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mylocaldiggingdb',
-        'User': 'admin',
+        'USER': 'admin',
         'PASSWORD': 'dangtangg9122005',
         'HOST': 'localdiggingclubdb.cahodehbnfjb.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
