@@ -31,7 +31,9 @@ urlpatterns = [
     path('createBlog/', blogapp.views.createBlog, name="createBlog"),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blogList/blogDetail/<int:blog_id>', blogapp.views.blogDetail, name="blogDetail"),
+    path('blogPersonList/blogPersonDetail/<int:blog_id>', blogapp.views.blogPersonDetail, name="blogPersonDetail"),
     path('login/', blogapp.views.LoginView.as_view(), name='login'),
+    path('blogPersonList/', blogapp.views.BlogPersonListview.as_view(), name="blogPersonList"),
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path("sitemap.xml", TemplateView.as_view(
         template_name='sitemap.xml',

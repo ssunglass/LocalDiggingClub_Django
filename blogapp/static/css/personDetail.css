@@ -1,0 +1,256 @@
+.head{
+display:flex;
+justify-content:space-between;
+}
+
+
+body {
+-webkit-touch-callout: none;
+user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-webkit-user-select: none;
+
+}
+
+.head .head-title-div p{
+font-size: 1.25vw;
+
+}
+
+.head .head-title{
+color:black;
+
+}
+
+.head .head-title:hover{
+color: #868e96;
+text-decoration: none;
+
+}
+
+.head .head-link{
+font-size: 1.25vw;
+color: black;
+}
+
+.head .head-link:hover{
+color: #8e44ad;
+text-decoration: none;
+}
+
+.container .blog-brand h1 {
+
+font-size: 2.9vw;
+}
+
+.container .blog-brand p{
+font-size: 1.5vw;
+height: 4.6vh;
+}
+
+.vertical-line {
+    margin-left: 50%
+    margin-right: 50%;
+    margin-top: 6%;
+    margin-bottom:6%;
+    height: 35vh;
+    width: 1px;
+    background-color: black;
+
+}
+
+.head-title-div {
+padding-top: 11vh;
+}
+
+.head-link-div{
+padding-top: 11vh;
+}
+
+.blog-main{
+text-align: left;
+font-size: 1.25vw;
+
+}
+
+.blog-head{
+padding-bottom: 9%;
+
+
+}
+
+.blog-head h2 {
+
+
+font-size: 3.1vw;
+
+}
+
+.blog-base{
+padding-left: 7%;
+padding-right: 7%;
+margin-top: 3%;
+
+}
+
+.blog-main img{
+display: block; margin: 0px auto;
+width:100%;
+padding-bottom: 1.5%;
+
+
+}
+
+.blog-main iframe{
+
+display: block; margin: 0px auto;
+width:100%;
+
+}
+
+.head .logo{
+ font-size: 2.3vw;
+ color: black;
+
+
+
+}
+
+.head .logo:hover{
+
+  color:#868e96;
+  text-decoration: none;
+
+}
+
+.logo-div{
+
+    padding-top: 5%;
+    padding-left: 3.5%;
+
+}
+.blog-main .image figcaption{
+   text-align: center;
+    font-size: 1vw;
+}
+
+.blog-main p {
+  line-height: 4.5vh;
+
+}
+
+.blog-head p{
+line-height: 140%;
+
+}
+
+
+
+@media screen and (max-width:575.98px) {
+/* 스마트폰 세로 */
+
+.container .blog-brand h1{
+font-size: 7.2vw;
+
+}
+
+.container .blog-brand p{
+   font-size: 5vw;
+
+}
+
+.blog-head h2{
+font-size: 6.2vw;
+
+}
+
+.blog-main{
+
+    font-size:3.75vw;
+}
+
+.head .head-title-div p{
+
+ font-size: 4vw;
+
+}
+
+.head .head-link{
+    font-size: 4vw;
+
+
+}
+
+.head .logo{
+   font-size:4vw;
+
+  }
+
+  .blog-main .image figcaption{
+     text-align: center;
+      font-size: 3vw;
+
+}
+
+.blog-main h2{
+
+    font-size: 4.3vw;
+
+
+}
+
+
+
+
+}
+
+@media screen and (min-width:576px) and (max-width:1200px) {
+/* 타블렛 */
+.container .blog-brand h1{
+font-size: 5.4vw;
+
+}
+
+.container .blog-brand p{
+ font-size:3vw;
+
+}
+
+.blog-head h2{
+font-size: 6vw;
+
+}
+
+.blog-main{
+
+    font-size:3vw;
+}
+
+.head .head-title-div p{
+
+ font-size: 3vw;
+
+}
+
+.head .head-link{
+    font-size: 3vw;
+
+
+}
+ .head .logo{
+   font-size:4vw;
+
+  }
+
+   .blog-main .image figcaption{
+   text-align: center;
+   font-size: 3vw;
+
+}
+
+
+
+}
+
+

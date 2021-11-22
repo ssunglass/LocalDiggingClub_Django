@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateBlog
-from .models import Blog, User
+from .models import Blog, Person
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -20,6 +20,29 @@ from django.views.generic import ListView, DetailView
 #    posts = paginator.get_page(page)
 
 #    return render(request, 'blogList.html', {'blogs': blogs, 'posts': posts})
+
+class BlogPersonListview(ListView):
+    model = Person
+    template_name = 'blogPersonList.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['blogs'] = Person.objects.all()
+        paginator = Paginator(context['blogs'], 10)
+        page = self.request.GET.get('page')
+        context['posts'] = paginator.get_page(page)
+
+        try:
+            context['posts'] = paginator.page(page)
+        except PageNotAnInteger:
+            context['posts'] = paginator.page(1)
+        except EmptyPage:
+            context['posts'] = paginator.page(paginator.num_pages)
+
+        return context
+
+
 
 class BlogListview(ListView):
     model = Blog
@@ -43,6 +66,10 @@ class BlogListview(ListView):
         return context
 
 
+
+def blogPersonDetail(request, blog_id):
+    blogPerson_detail = get_object_or_404(Person, pk=blog_id)
+    return render(request, 'blogPersonDetail.html', {'blogPerson_detail' : blogPerson_detail})
 
 
 

@@ -2,14 +2,10 @@
 <html lang="ko">
 {% load static %}
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="naver-site-verification" content="e7df74e9e6304bc511de24444dca93f9b88b6c93" />
-    <meta name="description" content="세상에는 알게 모르게, 좋은 곳들이 많습니다. 그곳들의 이야기를 모아줄 사람들도 생겼습니다. 바로 이렇게요.">
-    <link rel="canonical" href="https://locally.co.kr">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="로컬디깅클럽">
-    <meta property="og:description" content="세상에는 알게 모르게, 좋은 곳들이 많습니다. 그곳들의 이야기를 모아줄 사람들도 생겼습니다. 바로 이렇게요.">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -56,15 +52,15 @@
   });
 </script>
     <script src="{% static 'js/carousel.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/blogList.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blogPersonList.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontStyle.css' %}">
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
     <link rel="icon" type="image/png" href="{% static 'images/LDC.png' %}">
-    <title>로컬디깅클럽</title>
+    <title>로컬디깅클럽 : H</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZKMHPNNZK"></script>
 
-<script>
+    <script>
 
   window.dataLayer = window.dataLayer || [];
 
@@ -82,9 +78,6 @@
 
 <body>
 
-
-
-
  <div class="container column blog-base">
 
 
@@ -96,11 +89,11 @@
 
     <p class="topdivided">
 
-         <span><a class="pagelink" href="{% url 'blogPersonList' %}">사람들에 대한 아카이빙</a></span>
+         <span><a class="pagelink" href="{% url 'blogList' %}">브랜드에 대한 아카이빙</a></span>
     </p>
 
     <p class="divided">
-        <span class="title">로컬디깅클럽</span>
+        <span class="title">로컬디깅클럽 : H</span>
         <span class="divider"></span>
         <img class="logo rotate" src="{% static 'images/SVG_LDC.svg' %}">
     </p>
@@ -117,18 +110,18 @@
 
     {% if forloop.counter == 1 %}
     <div class="carousel-item active " style="cursor:pointer"
-       onclick="location.href='{% url 'blogDetail' blog.id %}' ">
+       onclick="location.href='{% url 'blogPersonDetail' blog.id %}' ">
     {% else %}
     <div class="carousel-item" style="cursor:pointer"
-       onclick="location.href='{% url 'blogDetail' blog.id %}' ">
+       onclick="location.href='{% url 'blogPersonDetail' blog.id %}' ">
     {% endif %}
         <img src="{{ blog.image.url }}" alt="Image">
   <div class=" carousel-caption bg-white" >
       <div class="brand-title">
-    <h3 >{{ blog.brand }}</h3>
+    <h3 >{{ blog.person }}</h3>
           </div>
       <div class="brand-location">
-    <p>{{ blog.location }}</p>
+    <p>{{ blog.position }}</p>
           </div>
   </div>
     </div>
@@ -150,81 +143,19 @@
 
 <p class="mt-5"></p>
 
-
- <!--
- <div class="container text-right">
-  <div class="edit-page" >
-    <a href="{% url 'createBlog' %}">
-    <img src="{%static 'images/edit.png' %}">
-        </a>
-
-    </div>
-   </div>
-   -->
-
-
-
-
-
-<!--
-   <main role="main" class="container text-center">
-       {% for blog in posts %}
-       <hr>
-       <div>
-          <p><a class="blog-title" href="{% url 'blogDetail' blog.id %}" role="button">{{blog.title}}</a></p>
-
-       </div>
-        {% endfor %}
-
-   <nav>
-        <ul class="pagination">
-       {% if posts.has_previous %}
-        <li class="page-item">
-            <a href="?page={{ posts.previous_page_number}}"><</a>
-            </li>
-         {% else %}
-        <li class="page-item disabled">
-                        <a class="page-link" href="#"><</a>
-        </li>
-        {% endif %}
-
-           <span>{{ posts.number}}/{{ posts.paginator.num_pages }}</span>
-
-
-        {% if posts.has_next %}
-         <li>
-          <a href="?page={{posts.next_page_number}}">></a>
-        </li>
-        {% else %}
-        <li class="page-item disabled">
-                        <a class="page-link" href="#">></a>
-                    </li>
-                    {% endif %}
-
-
-            </ul>
-        </nav>
-
-
-   </main>
-
- -->
- <div id="blog-posts" class="container text-center">
+<div id="blog-posts" class="container text-center">
      {% for blog in posts %}
      <hr>
      <div>
-         <p><a class="blog-title" href="{% url 'blogDetail' blog.id %}" role="button">{{blog.title}}</a></p>
+         <p><a class="blog-title" href="{% url 'blogPersonDetail' blog.id %}" role="button">{{blog.title}}</a></p>
 
      </div>
      {% endfor %}
  </div>
 
-
-
-
-
 <div class="container text-center paginator">
-    <nav id="pagination">
+
+      <nav id="pagination">
         <ul class="pagination justify-content-center pagination-sm">
             {% if posts.has_previous %}
             <li class="page-item">
@@ -278,11 +209,6 @@
 
 </div>
 
-
-
-
-
-
 <script type="text/javascript">
      function ajaxPagination() {
        $('#pagination a.page-link').each((index, el) => {
@@ -314,13 +240,6 @@
        })
 
 </script>
-
-
-
-
-
-
-
 
 
 </body>

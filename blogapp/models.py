@@ -18,6 +18,18 @@ class Blog(models.Model):
     head = models.TextField(default='')
 
 
+
+class Person(models.Model):
+    person = models.CharField(max_length=50, default='')
+    position = models.CharField(max_length=200, default='')
+    title = models.CharField(max_length=100)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    body = RichTextUploadingField()
+    image = models.ImageField(upload_to='bannerPersonImages/', null=True)
+    instagram = models.URLField(max_length=250, default='')
+    head = models.TextField(default='')
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField('email', unique=True,default='')
     username = models.CharField(max_length=64, verbose_name='사용자명')

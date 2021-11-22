@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, User
+from .models import Blog, User, Person
 
 
 
@@ -7,6 +7,10 @@ from .models import Blog, User
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('brand', 'location', 'title', 'pub_date')
+
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ('person', 'position',  'title', 'pub_date')
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'password', 'registered_dttm', 'status','is_superuser', 'is_active')
@@ -18,4 +22,5 @@ class UserAdmin(admin.ModelAdmin):
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(User, UserAdmin)
+admin.site.register(Person, PersonAdmin)
 # admin.site.register(Banner, BannerAdmin)

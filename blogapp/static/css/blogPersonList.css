@@ -16,17 +16,10 @@
 
  display: flex;
 
- justify-content: flex-end;
+ justify-content: flex-start;
  margin-top: 4%
 
 
-}
-
-
-.blog-title {
-
-font-size: 1.25vw;
-color:black
 }
 
 .pagelink{
@@ -38,6 +31,13 @@ color:black
 color: #868e96;
 text-decoration: none;
 
+}
+
+
+.blog-title {
+
+font-size: 1.25vw;
+color:black
 }
 
 .blog-title:hover {
@@ -221,6 +221,10 @@ height: 3%;
 @media screen and (max-width:575.98px) {
 /* 스마트폰 세로 */
 
+.md-5{
+height: 58vh
+}
+
 
 .bottom-img img {
 width: 3.5vw;
@@ -262,19 +266,10 @@ font-size: 2vw;
 
 }
 
-.pagelink {
-
-font-size: 3vw
-
-}
-
 .edit-page {
   display: none;
 }
 
-.md-5{
-height: 58vh
-}
 
 }
 
@@ -310,12 +305,6 @@ width: 2.5vw;
 
 }
 
-.pagelink{
-
-font-size:2vw
-
-}
-
 .edit-page {
   display: none;
 }
@@ -330,4 +319,3 @@ font-size: 2vw;
 }
 
 }
-
