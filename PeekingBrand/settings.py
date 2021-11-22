@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'PeekingBrand.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/user/srv/LocalDiggingClub_Django/db.sqlite3',
+        'NAME': '/home/ubuntu/srv/LocalDiggingClub_Django/db.sqlite3',
     }
 }
 
